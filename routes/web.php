@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
+use Symfony\Component\HttpFoundation\Session\Session;
 
 
 /*
@@ -16,7 +17,7 @@ use App\Http\Controllers\ProductController;
 |
 */
 
-    
+
 Route::get('/login', function () {
     return view('login');
 });

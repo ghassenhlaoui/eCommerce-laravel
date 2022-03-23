@@ -1,9 +1,11 @@
 @extends('master')
 @section("content")
 <div class="custom-product">
+    @include('flash::message')
      <div class="col-sm-10">
+
+
         <table class="table">
-         
             <tbody>
               <tr>
                 <td>Amount</td>
@@ -41,4 +43,4 @@
           </div>
      </div>
 </div>
-@endsection 
+@endsection
