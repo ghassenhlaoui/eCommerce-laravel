@@ -64,6 +64,10 @@
             margin-bottom: 20px;
             padding-bottom: 20px
         }
+        .foo{
+            text-align: center;
+            font-style: italic;
+        }
     </style>
 
 </html>
