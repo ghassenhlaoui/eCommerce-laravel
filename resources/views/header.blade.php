@@ -1,4 +1,4 @@
-<?php 
+<?php
 use App\Http\Controllers\ProductController;
 $total=0;
 if(Session::has('user'))
@@ -20,7 +20,7 @@ if(Session::has('user'))
         </button>
         <a class="navbar-brand" href="/">Hlaoui Shop</a>
       </div>
-  
+
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
@@ -40,10 +40,11 @@ if(Session::has('user'))
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">{{Session::get('user')['name']}}
             <span class="caret"></span></a>
             <ul class="dropdown-menu">
+              <li><a href="/Admin">All Products</a></li>
               <li><a href="/logout">Logout</a></li>
             </ul>
           </li>
-          @else 
+          @else
           <li><a href="/login">Login</a></li>
           <li><a href="/register">Register</a></li>
           @endif

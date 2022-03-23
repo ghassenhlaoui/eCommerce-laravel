@@ -5,6 +5,7 @@
         <div class="trending-wrapper">
             <h4>my orders </h4>
             @foreach($orders as $item)
+                @foreach($item->products as $prod)
             <div class=" row searched-item cart-list-devider">
              <div class="col-sm-3">
                 <a href="detail/{{$item->id}}">
@@ -13,7 +14,7 @@
              </div>
              <div class="col-sm-4">
                     <div class="">
-                      <h2>Name : {{$item->name}}</h2>
+                      <h2>Name : {{$prod->name}}</h2>
                       <h5>Delivery Status : {{$item->status}}</h5>
                       <h5>Address : {{$item->address}}</h5>
                       <h5>Payment Status : {{$item->payment_status}}</h5>
@@ -21,11 +22,12 @@
 
                     </div>
              </div>
-            
+
             </div>
+            @endforeach
             @endforeach
           </div>
 
      </div>
 </div>
-@endsection 
+@endsection

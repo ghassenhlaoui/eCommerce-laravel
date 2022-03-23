@@ -9,4 +9,12 @@ class Order extends Model
 {
     use HasFactory;
     public $timestamps= false;
+
+    protected $fillable = ['status', 'payment_method', 'payment_status','address'];
+    public function products()
+    {
+        return $this->belongsToMany(Product::class);
+    }
+
+
 }
