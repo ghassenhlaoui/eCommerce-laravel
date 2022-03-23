@@ -1,9 +1,10 @@
 <?php
 
+use App\Http\Controllers\CrudProdController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
-use Symfony\Component\HttpFoundation\Session\Session;
+use Illuminate\Support\Facades\Session;
 
 
 /*
@@ -38,4 +39,9 @@ Route::get("removecart/{id}",[ProductController::class,'removeCart']);
 Route::get("ordernow",[ProductController::class,'orderNow']);
 Route::post("orderplace",[ProductController::class,'orderPlace']);
 Route::get("myorders",[ProductController::class,'myOrders']);
-
+Route::get("Admin",[CrudProdController::class,'index']);
+Route::get("create",[CrudProdController::class,'create']);
+Route::post("store",[CrudProdController::class,'store']);
+Route::get("edit/{id}",[CrudProdController::class,'edit']);
+Route::post("editstore/{id}",[CrudProdController::class,'editstore']);
+Route::get("delete/{id}",[CrudProdController::class,'delete']);

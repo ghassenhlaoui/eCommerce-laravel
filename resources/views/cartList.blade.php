@@ -9,7 +9,7 @@
               <div class="row search-item cart-list-devider">
                   <div class="col-sm-3">
                     <a href="detail/{{$item->id}}">
-                        <img class="trending-image" src="{{$item->gallery}}">
+                        <img class="trending-image" src="/img/{{$item->gallery}}">
                       </a>
                   </div>
 
@@ -23,11 +23,11 @@
                   <div class="col-sm-3">
                     <a href="/removecart/{{$item->cart_id}}" class="btn btn-warning">Remove to Cart </a>
                   </div>
-                
+
               </div>
               @endforeach
         </div>
         <a class="btn btn-success" href="ordernow">Order Now </a> <br> <br>
       </div>
-</div>    
+</div>
 @endsection
