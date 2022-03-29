@@ -45,3 +45,4 @@ Route::post("store",[CrudProdController::class,'store']);
 Route::get("edit/{id}",[CrudProdController::class,'edit']);
 Route::post("editstore/{id}",[CrudProdController::class,'editstore']);
 Route::get("delete/{id}",[CrudProdController::class,'delete']);
+Route::get("showproduct/{id}",[ProductController::class,'detail']);

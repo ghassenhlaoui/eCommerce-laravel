@@ -30,6 +30,16 @@
 
     </body>
     <style>
+        .inp {
+            text-align: center;
+            margin: auto;
+            }
+        .form {
+            text-align: center;
+        }
+        .but{
+            text-align: center;
+        }
         .custom-login{
             height: 500px;
             padding-top: 100px

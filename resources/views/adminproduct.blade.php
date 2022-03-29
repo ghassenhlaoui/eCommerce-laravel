@@ -1,30 +1,32 @@
 @extends('master')
 @section("content")
-    <a class="button is-info" href="/create">Créer un
-        Produit</a>
-
+        
+    <div class="but">
+    <a class="btn btn-primary " href="/create">New Product</a> 
+    </div>
     <table class="table">
         <thead>
         <tr>
-            <th scope="col">#</th>
+            <th style="visibility:hidden;" scope="col">#</th>
             <th scope="col">Name</th>
             <th scope="col">Price</th>
-            <th scope="col">description</th>
-            <th scope="col">gallery</th>
+            <th scope="col">Description</th>
+            <th scope="col">Gallery</th>
             <th scope="col">Actions</th>
         </tr>
         </thead>
         <tbody>
         @foreach($prod as $prods)
         <tr>
-            <th scope="row">1</th>
+            <th style="visibility:hidden;" scope="row">1</th>
             <td>{{$prods->name}}</td>
-            <td>{{$prods->price}}</td>
+            <td>{{$prods->price}}TND</td>
             <td>{{$prods->description}}</td>
-            <td>{{$prods->description}}</td>
+            {{-- <td>{{$prods->description}}</td> --}}
             <td><img style="width: 100px;"  src="/img/{{$prods->gallery}}"> </td>
-            <td><a href="edit/{{$prods->id}}">Edit</a> </td>
-            <td><a href="delete/{{$prods->id}}">Delete</a> </td>
+            <td><a class="btn btn-success" href="detail/{{$prods->id}}">Show</a> </td>
+            <td><a class="btn btn-warning" href="edit/{{$prods->id}}">Edit</a> </td>
+            <td><a class="btn btn-danger" href="delete/{{$prods->id}}">Delete</a> </td>
 
         </tr>
     @endforeach

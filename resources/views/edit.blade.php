@@ -2,10 +2,10 @@
 @section('content')
     <div class="card">
         <header class="card-header">
-            <p class="card-header-title">Création d'un Produit</p>
+            <h2 style="text-align:center;">Modify Product</h2>
         </header>
         <div class="card-content">
-            <div class="content">
+            <div class="content form">
                 <form action="/editstore/{{ $prod->id  }}" method="POST" enctype="multipart/form-data">
                     @csrf
 
@@ -28,27 +28,29 @@
                     <div class="field">
                         <label class="label">Description</label>
                         <div class="control">
-<textarea class="textarea" name="description"
-          placeholder="Description du film">{{ $prod->price  }}</textarea>
+                        <textarea class="textarea" name="description"
+                         placeholder="Description du film" style="height: 100px; width:178px;">{{ $prod->description  }}</textarea>
 
                         </div>
                         @error('description')
                         <p class="help is-danger">{{ $message }}</p>
                         @enderror
                     </div>
+                    <br>
                     <div class="field">
-                        <div class="control">
+                        <div class="control" style="text-align:center;">
 
-                            <input type="file" name="image" class="form-control">
+                            <input type="file"  name="image" class="form-control">
 
                         </div>
                     </div>
+                    <br><br>
                     <div class="field">
                         <div class="control">
-                            <button class="button is-link">Envoyer</button>
+                            <a class="btn btn-info" href="/Admin">Envoyer</a>
                         </div>
                     </div>
-
+                    <br><br>
                 </form>
             </div>
         </div>

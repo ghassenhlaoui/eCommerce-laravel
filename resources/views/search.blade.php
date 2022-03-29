@@ -10,7 +10,7 @@
             @foreach($products as $item)
               <div class="search-item">
                 <a href="detail/{{$item['id']}}">
-                  <img class="trending-image" src="{{$item['gallery']}}">
+                  <img class="trending-image" src="/img/{{$item['gallery']}}">
                   <div class="">
                   <h2>{{$item['name']}}</h2>
                   <h5>{{$item['description']}}</h5>

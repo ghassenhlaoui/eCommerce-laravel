@@ -1,7 +1,7 @@
 @extends('master')
 @section("content")
 <div class="custom-product">
-    @include('flash::message')
+    {{-- @include('flash::message') --}}
      <div class="col-sm-10">
 
 

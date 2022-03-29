@@ -2,7 +2,7 @@
 @section('content')
     <div class="card">
         <header class="card-header">
-            <p class="card-header-title">Création d'un Produit</p>
+            <p class="button is-primary">Création d'un Produit</p>
         </header>
         <div class="card-content">
             <div class="content">
@@ -28,8 +28,8 @@
                     <div class="field">
                         <label class="label">Description</label>
                         <div class="control">
-<textarea class="textarea" name="description"
-          placeholder="Description du film"></textarea>
+                            <textarea class="textarea" name="description"
+                                placeholder="Description du produit"></textarea>
 
                         </div>
                         @error('description')
