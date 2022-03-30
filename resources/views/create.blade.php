@@ -2,7 +2,7 @@
 @section('content')
     <div class="card">
         <header class="card-header">
-            <p class="button is-primary">Création d'un Produit</p>
+            <label style="text-align: center;background-color: coral; ">Create new Product</label>
         </header>
         <div class="card-content">
             <div class="content">
@@ -20,7 +20,7 @@
                     <div class="field">
                         <label class="label">price</label>
                         <div class="control">
-                            <input class="input" type="number" name="price" value="" min="0">
+                            <input class="input" placeholder="Price" type="number" name="price" value="" min="0">
 
                         </div>
 

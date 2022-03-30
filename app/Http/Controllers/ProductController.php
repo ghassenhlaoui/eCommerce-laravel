@@ -10,8 +10,10 @@ use App\Models\Order;
 use Illuminate\Support\Facades\Session;
 
 
+
 class ProductController extends Controller
 {
+    
     function index()
     {
         $data= Product::all();
